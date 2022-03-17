@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>News</h2>
+
+<form action="">
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="inputPassword6" class="col-form-label">Password</label>
+        </div>
+        <div class="col-auto">
+          <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+        </div>
+
+        <div class="col-auto">
+            <button class="btn btn-secondary">
+                <i class="bi bi-arrow-bar-right"></i>
+            </button>
+        </div>
+      </div>
+</form>
+
+  <div class="card card-c" *ngFor="let p of post">
+    <div class="card-body">
+      <h5 class="card-title">{{ p.title }}</h5>
+      <p class="card-text">
+        {{ p.body }}
+      </p>
+    </div>
+  </div>
+</div>
