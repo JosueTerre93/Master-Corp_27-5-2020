@@ -1,0 +1,24 @@
+.author{
+    color: blue;
+}
+
+.title-post{
+    margin-left: 0px;
+}
+
+.comments-title{
+    color: rgb(78, 78, 78);
+}
+
+.post-container{
+    margin-bottom: 50px;
+}
+
+.comment-container{
+    max-width: 65%;
+}
+
+.body-comment{
+    font-size: small;
+    color: gray;
+}

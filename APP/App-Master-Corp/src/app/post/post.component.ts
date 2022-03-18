@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../Models/post';
+import { Router } from '@angular/router';
+import { Post } from '../Models/Post';
+import { AppServiceService } from '../Services/app-service.service';
 
 @Component({
   selector: 'app-post',
@@ -7,25 +9,19 @@ import { Post } from '../Models/post';
   styleUrls: ['./post.component.css'],
 })
 export class PostComponent implements OnInit {
-  post: Post[] = [
-    
-      {
-        userId: 1,
-        id: 1,
-        title: "Title 1",
-        body: "Proident veniam elit nisi labore irure labore velit id culpa cupidatat nulla magna laboris incididunt. Consectetur nulla ullamco nulla laborum. Labore nulla irure esse nisi ut. Esse occaecat est magna duis proident enim. Ullamco culpa et enim officia duis qui elit eiusmod. Officia consequat in do consectetur pariatur non dolore cupidatat sunt cupidatat ex eu labore elit. Dolor incididunt amet aliquip consequat incididunt eiusmod amet ullamco adipisicing."
-        },
-        {
-        userId: 1,
-        id: 2,
-        title: "Title 2",
-        body: "In id sint enim mollit ut elit velit eiusmod consequat sit. Ea commodo culpa non ipsum laborum. Dolor adipisicing veniam labore aliquip exercitation magna officia ex sint aliqua irure mollit. Sint do laboris minim excepteur cillum et in ex enim anim velit cupidatat est Lorem."
-        }
-  ];
+  post: Post[] = [];
 
-  constructor() {}
+  constructor(private router: Router, private appService: AppServiceService) {}
 
   ngOnInit(): void {
+    this.loadPost();
+  }
 
+  loadPost(){
+    this.appService.getPost().subscribe(post => this.post = post);
+  }
+
+  openPost(id: number){
+    this.router.navigate(['/singlepost/'+id]);
   }
 }

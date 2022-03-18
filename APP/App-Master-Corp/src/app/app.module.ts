@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { PostComponent } from './post/post.component';
 import { SinglePostComponent } from './single-post/single-post.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { SinglePostComponent } from './single-post/single-post.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

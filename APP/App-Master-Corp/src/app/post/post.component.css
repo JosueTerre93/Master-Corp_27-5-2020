@@ -1,6 +1,13 @@
-.card-c{
-    margin-top: 10px;
-    box-shadow: 20px;
-    box-shadow: 3px 3px 5px rgb(160, 160, 160);
+.card-c {
+  margin-top: 10px;
+  box-shadow: 20px;
+  box-shadow: 3px 3px 5px rgb(160, 160, 160);
 }
 
+.card-c:hover {
+  cursor: pointer;
+}
+
+h2 {
+  font-weight: bold;
+}

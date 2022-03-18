@@ -1,12 +1,12 @@
 export class Comment {
-  postId: string;
+  postId: number;
   id: number;
   name: string;
   email: string;
   body: string;
 
   constructor(
-    postId: string,
+    postId: number,
     id: number,
     name: string,
     email: string,
