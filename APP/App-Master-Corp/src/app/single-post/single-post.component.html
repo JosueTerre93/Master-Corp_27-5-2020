@@ -2,20 +2,25 @@
   <div class="post-container">
     <h1 class="title-post">{{ post.title }}</h1>
 
-    <p class="author">By user: {{ post.userId }}</p>
+    <p class="author">By user: {{ post.id }}</p>
 
+    <!-- Post body -->
     <p>{{ post.body }}</p>
   </div>
 
   <h3 class="comments-title">Comments</h3>
 
-  <!-- <div class="comment-container" *ngFor="let c of comment">
+  <div class="comment-container" *ngFor="let c of comment">
     <h5>{{ c.name }}</h5>
     <p class="body-comment">{{ c.body }}</p>
     <hr />
   </div>
 
-  <div style="float: right; margin-bottom: 50px;">
+  <div style="float: right; margin-bottom: 50px">
     <button class="btn btn-secondary" (click)="dashboard()">Dashboard</button>
   </div>
-</div> -->
+
+  <div style="float: right; margin-bottom: 50px">
+    <button class="btn btn-secondary" (click)="viewPost()">View post</button>
+  </div>
+</div>
