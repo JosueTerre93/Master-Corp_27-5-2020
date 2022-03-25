@@ -1,19 +1,25 @@
 <div class="container">
   <h2>News</h2>
 
-<form action="">
-    <div class="row g-3 align-items-center">
-        <div class="col-auto">
-          <input type="text" class="form-control" placeholder="Search by user...">
-        </div>
-
-        <div class="col-auto">
-            <button class="btn btn-secondary">
-              <i class="bi bi-search"></i>
-            </button>
-        </div>
-      </div>
-</form>
+  <form class="example-form">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Pick one"
+      aria-label="Number"
+      matInput
+      [formControl]="myControl"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option
+        *ngFor="let option of filteredOptions | async"
+        [value]="option"
+      >
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </form>
 
   <div class="card card-c" *ngFor="let p of post" (click)="openPost(p.id)">
     <div class="card-body">
@@ -25,4 +31,4 @@
   </div>
 </div>
 
-<div style="margin-bottom: 50px;"></div>
+<div style="margin-bottom: 50px"></div>
