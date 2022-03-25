@@ -1,6 +1,6 @@
 <div class="container">
   <div class="post-container">
-    <h1 class="title-post">{{ post.title }}</h1>
+    <h1 class="title-post fw-bolder">{{ post.title }}</h1>
 
     <p class="author">By user: {{ post.id }}</p>
 
@@ -8,10 +8,10 @@
     <p>{{ post.body }}</p>
   </div>
 
-  <h3 class="comments-title">Comments</h3>
+  <h3 class="comments-title fw-light">Comments</h3>
 
   <div class="comment-container" *ngFor="let c of comment">
-    <h5>{{ c.name }}</h5>
+    <h5 class="comment-title">{{ c.name }}</h5>
     <p class="body-comment">{{ c.body }}</p>
     <hr />
   </div>
