@@ -9,6 +9,11 @@
     "test": "ng test"
   },
   "private": true,
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "dependencies": {
     "@angular/animations": "~13.2.0",
     "@angular/cdk": "^13.3.1",

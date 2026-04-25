@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PostComponent } from './post/post.component';
-import { SinglePostComponent } from './single-post/single-post.component';
+
+import { IdeComponent } from './ide/ide.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'posts', pathMatch: 'full'},
-  {path: 'posts', component: PostComponent},
-  {path: 'singlepost/:id', component: SinglePostComponent}
+  {path: '', redirectTo: 'ide', pathMatch: 'full'},
+  {path: 'ide', component: IdeComponent}
 ];
 
 @NgModule({
